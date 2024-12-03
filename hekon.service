@@ -1,0 +1,14 @@
+[Unit]
+Description=Hekon Tg bot
+After=network.target
+
+[Service]
+User=root
+Group=root
+
+WorkingDirectory=/home/hekon/
+Environment="PYTHONPATH=/home/hekon/"
+ExecStart=python3 /home/hekon/app.py
+
+[Install]
+WantedBy=multi-user.target
